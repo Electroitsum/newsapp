@@ -18,6 +18,8 @@ function Newscontent(props) {
       .then((data) => {
         setValue(data.articles);
         console.log(data.articles);
+      }).catch((error) => {
+        console.log("server connection error");
       });
   }
   useEffect(apicall, [props.linkData]);

@@ -1,7 +1,8 @@
+
 import SearchField from "react-search-field";
 var width = window.innerWidth;
 var webView = false;
-var search;
+var content = {searchBarData: '', countrySelected: '' }
 
 function Searchbar(props) {
   if (width > 500) {
@@ -9,16 +10,23 @@ function Searchbar(props) {
   } else {
     webView = false;
   }
-  function searchNews(value1, value2){
+  function searchNews(value){
     
-    console.log(value1, Value2);
-    props.onSearchEnter(value1, value2);
+    console.log(value);
+      content.searchBarData= value;
+    props.onSearchEnter(content);
+
   }
 
-  function countryHandler(e){
-    console.log(e.target.innerText);
-  }
+ function countryHandler(e){
+   
+    
+      content.countrySelected= e.target.innerText;
+     
 
+    props.onSearchEnter(content);
+  }
+console.log(content);
 
   return (
     <div>
