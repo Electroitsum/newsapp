@@ -1,8 +1,6 @@
-@import './Style/main.scss';
-@import './Style/newscontent.css';
-@import './Style/newscard.css';
-
-
+@import "./Style/main.scss";
+@import "./Style/newscontent.css";
+@import "./Style/newscard.css";
 
 .App {
   text-align: center;
@@ -40,5 +38,43 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.headtilte {
+  font-family: "Pirata One", cursive;
+  font-size: 80px;
+  margin-top: 16px;
+}
+.navcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  .navbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    margin: 40px 20px 0;
+    .navlink {
+      border: 1px solid black;
+      border-radius: 5px;
+      height: 30px;
+      width: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: black;
+    }
+  }
+  .active {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    .navlink {
+      text-decoration: none;
+      color: white;
+    }
   }
 }
